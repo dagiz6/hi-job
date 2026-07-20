@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
@@ -13,7 +14,7 @@ export default function Header() {
         <div className="hdr-wrapper">
           
           {/* Logo */}
-          <a href="/" className="hdr-logo flex items-center hover:opacity-85 transition-opacity">
+          <Link href="/" className="hdr-logo flex items-center hover:opacity-85 transition-opacity">
             <Image
               src="/logo.png"
               alt="Hi JOB"
@@ -22,7 +23,7 @@ export default function Header() {
               priority
               className="object-contain"
             />
-          </a>
+          </Link>
 
           {/* Back button (Only visible on medium mid size: 860px to 1439px) */}
           <button className="hdr-back-btn hidden min-[860px]:max-[1439px]:flex items-center justify-center hover:bg-[#E5E7EB] transition-colors">
