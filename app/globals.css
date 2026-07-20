@@ -1,26 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
+/* ─── Design Tokens ─────────────────────────────────────────────────────── */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:   #ffffff;
+  --text: #4D5A68;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  transition: padding-top 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base Header container height responsive rules */
+@media (min-width: 860px) {
+  body {
+    padding-top: 68px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 859px) {
+  body {
+    padding-top: 56px;
+    padding-bottom: 89px;
+  }
+}
+
+/* ─── Responsive Header Classes ────────────────────────────────────────── */
+
+/* Wrapper width configs */
+.hdr-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Full Screen (1920px width) spec constraints */
+@media (min-width: 1920px) {
+  .hdr-wrapper {
+    width: 1920px;
+  }
+
+  .hdr-logo {
+    position: absolute;
+    width: 153px;
+    height: 23.99px;
+    top: 23px;
+    left: 220px;
+  }
+
+  .hdr-search-container {
+    position: absolute;
+    width: 448px;
+    height: 40px;
+    top: 15px;
+    left: 406.06px;
+  }
+
+  .hdr-feed {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    top: 15px;
+    left: 1158.06px;
+  }
+
+  .hdr-analytics {
+    position: absolute;
+    width: 175px;
+    height: 40px;
+    top: 15px;
+    left: 1252.06px;
+  }
+
+  .hdr-notifications {
+    position: absolute;
+    width: 131px;
+    height: 39px;
+    top: 16px;
+    left: 1441.06px;
+  }
+
+  .hdr-percent-badge {
+    position: absolute;
+    width: 50.23px;
+    height: 50.23px;
+    top: 10px;
+    left: 1586.26px;
+    border-radius: 50%;
+  }
+
+  .hdr-profile-pic {
+    position: absolute;
+    width: 49.17px;
+    height: 48.73px;
+    top: 10px;
+    left: 1650.7px;
+  }
+}
+
+/* Medium Screen (1440px to 1919px width) spec constraints */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .hdr-wrapper {
+    width: 1440px;
+  }
+
+  .hdr-logo {
+    position: absolute;
+    width: 153px;
+    height: 23.99px;
+    top: 21px;
+    left: 83px;
+  }
+
+  .hdr-search-container {
+    position: absolute;
+    width: 448px;
+    height: 40px;
+    top: 13px;
+    left: 268px;
+  }
+
+  .hdr-feed {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    top: 13px;
+    left: 815px;
+  }
+
+  .hdr-analytics {
+    position: absolute;
+    width: 175px;
+    height: 40px;
+    top: 13px;
+    left: 909px;
+  }
+
+  .hdr-notifications {
+    position: absolute;
+    width: 131px;
+    height: 39px;
+    top: 13px;
+    left: 1098px;
+  }
+
+  .hdr-percent-badge {
+    position: absolute;
+    width: 50.23px;
+    height: 50.23px;
+    top: 8px;
+    left: 1243.2px;
+    border-radius: 50%;
+  }
+
+  .hdr-profile-pic {
+    position: absolute;
+    width: 49.17px;
+    height: 48.73px;
+    top: 9px;
+    left: 1307.63px;
+  }
+}
+
+/* Medium Mid Screen (860px to 1439px width) spec constraints */
+@media (min-width: 860px) and (max-width: 1439px) {
+  .hdr-wrapper {
+    width: 860px;
+  }
+
+  .hdr-logo {
+    position: absolute;
+    width: 153px;
+    height: 23.99px;
+    top: 22px;
+    left: 40px;
+  }
+
+  .hdr-back-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 14px;
+    left: 233px;
+    border-radius: 12px;
+    background-color: #F1F2F5;
+  }
+
+  .hdr-search-container {
+    position: absolute;
+    width: 541px;
+    height: 40px;
+    top: 14px;
+    left: 279px;
+  }
 }
