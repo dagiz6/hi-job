@@ -8,6 +8,7 @@ export default function Home() {
       <div className="feed-layout">
         <ProfileCard />
         <EmptySearch />
+        
         <PromotionRail />
       </div>
     </main>
